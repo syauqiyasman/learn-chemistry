@@ -1,52 +1,62 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 import PrimaryButton from '@/components/ui/button.styled'
 import Container from '@/components/ui/container.styled'
 
+const Background = styled.div`
+  background-color: #0369a1;
+`
+
 const Hero = styled.main`
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-const HeroImageWrapper = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  margin-left: auto;
+const Hero1 = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  @media (min-width: 1028px) {
+    flex-direction: row;
+  }
 `
-
 const HeroImage = styled.img`
+  max-width: 100%;
 `
 
 const Introduction = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
+  text-align: center;
   margin-top: auto;
   margin-bottom: auto;
+  @media (min-width: 1028px) {  
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+`
+
+const Text = styled.h1`
+  color: #fff;
 `
 
 export default function Home() {
   return (
-    <Container>
-      <Hero>
-        <HeroImageWrapper>
-          <HeroImage src="https://res.cloudinary.com/hexabisa/image/upload/v1647955832/react_sqm1rr.png" alt="" />
-        </HeroImageWrapper>
-        <Introduction>
-          <h1>
-            Hi there!
-          </h1>
-          <p>
-            We are watching you
-          </p>
-          <PrimaryButton>Get started!</PrimaryButton>
-        </Introduction>
-      </Hero>
-    </Container>
+    <Background>
+      <Container>
+        <Hero>
+          <Hero1>
+            <Introduction>
+              <Text>
+                We are watching you
+              </Text>
+              <Link href="/introduction" passHref>
+                <PrimaryButton as="a">Get started</PrimaryButton>
+              </Link>
+            </Introduction>
+            <HeroImage src="https://res.cloudinary.com/hexabisa/image/upload/v1647955832/react_sqm1rr.png" alt="" />
+          </Hero1>
+        </Hero>
+      </Container>
+    </Background>
   )
 }
