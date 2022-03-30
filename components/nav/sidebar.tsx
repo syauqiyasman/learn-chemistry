@@ -3,8 +3,9 @@ import Link from 'next/link'
 import { LargeContainer } from '@/components/ui/container.styled'
 
 const Aside = styled.aside`
+  background-color: #fff;
   width: 16rem;
-  z-index: 9999;
+  z-index: 10;
   position: fixed;
   top: 4rem;
   bottom: 0;
@@ -39,6 +40,10 @@ const AsideMenuButton = styled.a`
   &:hover {
     background-color: #f9fafb;
   }
+  &:focus {
+    background-color: #f9fafb;
+    outline: none;
+  }
 `
 
 const AsideMenuButtonText = styled.span`
@@ -47,22 +52,7 @@ const AsideMenuButtonText = styled.span`
   white-space: nowrap;
 `
 
-const AsideMenuButtonBadge = styled.span`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin-left: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  color: #1f2937;
-  background-color: #f9fafb;
-  border-radius: 9999px;
-`
-
-const menus = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+const menus = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 export default function Sidebar() {
   return (
@@ -74,49 +64,6 @@ export default function Sidebar() {
               <Link href="/introduction" passHref>
                 <AsideMenuButton>
                   <AsideMenuButtonText>Introduction</AsideMenuButtonText>
-                </AsideMenuButton>
-              </Link>
-            </AsideMenuList>
-            <AsideMenuList>
-              <Link href="/chapter-1" passHref>
-                <AsideMenuButton>
-                  <AsideMenuButtonText>Chapter 1</AsideMenuButtonText>
-                </AsideMenuButton>
-              </Link>
-            </AsideMenuList>
-            <AsideMenuList>
-              <Link href="/chapter-2" passHref>
-                <AsideMenuButton>
-                  <AsideMenuButtonText>Chapter 2</AsideMenuButtonText>
-                </AsideMenuButton>
-              </Link>
-            </AsideMenuList>
-            <AsideMenuList>
-              <Link href="/chapter-3" passHref>
-                <AsideMenuButton>
-                  <AsideMenuButtonText>Chapter 3</AsideMenuButtonText>
-                </AsideMenuButton>
-              </Link>
-            </AsideMenuList>
-            <AsideMenuList>
-              <Link href="/chapter-4" passHref>
-                <AsideMenuButton>
-                  <AsideMenuButtonText>Chapter 4</AsideMenuButtonText>
-                </AsideMenuButton>
-              </Link>
-            </AsideMenuList>
-            <AsideMenuList>
-              <Link href="/chapter-5" passHref>
-                <AsideMenuButton>
-                  <AsideMenuButtonText>Chapter 5</AsideMenuButtonText>
-                </AsideMenuButton>
-              </Link>
-            </AsideMenuList>
-            <AsideMenuList>
-              <Link href="/chapter-6" passHref>
-                <AsideMenuButton>
-                  <AsideMenuButtonText>Chapter 6</AsideMenuButtonText>
-                  <AsideMenuButtonBadge>New</AsideMenuButtonBadge>
                 </AsideMenuButton>
               </Link>
             </AsideMenuList>

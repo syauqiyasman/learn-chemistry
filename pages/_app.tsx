@@ -5,12 +5,18 @@ import Navigation from '@/components/nav'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
-  const showNavigation = router.pathname !== '/'
+
+  if (router.pathname !== '/') {
+    return (
+      <>
+        <Navigation />
+        <Component {...pageProps} />
+      </>
+    )
+  }
+
   return (
-    <>
-      {showNavigation && <Navigation />}
-      <Component {...pageProps} />
-    </>
+    <Component {...pageProps} />
   )
 }
 
