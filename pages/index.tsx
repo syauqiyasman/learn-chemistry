@@ -49,7 +49,7 @@ export default function Home() {
               <Text>
                 We are watching you
               </Text>
-              <Link href="/introduction" passHref>
+              <Link href="/neutron-boom" passHref>
                 <PrimaryButton as="a">Get started</PrimaryButton>
               </Link>
             </Introduction>

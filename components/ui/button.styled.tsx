@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const PrimaryButton = styled.button`
-  padding-right 1rem;
+  padding-right: 1rem;
   padding-left: 1rem;
   padding-top: .75rem;
   padding-bottom: .75rem;
