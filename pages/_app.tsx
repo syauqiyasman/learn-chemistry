@@ -2,6 +2,8 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import Navigation from '@/components/nav'
+import { LargeContainer } from '@/components/ui/container'
+import Content from '@/components/ui/content'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -10,7 +12,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
       <>
         <Navigation />
-        <Component {...pageProps} />
+        <LargeContainer>
+          <Content>
+            <Component {...pageProps} />
+          </Content>
+        </LargeContainer>
       </>
     )
   }
