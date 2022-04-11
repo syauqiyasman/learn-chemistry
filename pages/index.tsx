@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import PrimaryButton from '@/components/ui/button.styled'
-import Container from '@/components/ui/container.styled'
+import PrimaryButton from '@/components/ui/button'
+import Container from '@/components/ui/container'
 
 const Background = styled.div`
-  background-color: #0369a1;
+  background-color: #fff;
 `
 
 const Hero = styled.main`
@@ -14,29 +14,20 @@ const Hero = styled.main`
   justify-content: center;
 `
 
-const Hero1 = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  @media (min-width: 1028px) {
-    flex-direction: row;
-  }
-`
-const HeroImage = styled.img`
-  max-width: 100%;
-`
-
 const Introduction = styled.div`
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-  @media (min-width: 1028px) {  
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
 `
 
 const Text = styled.h1`
-  color: #fff;
+  color: #000;
+  padding-bottom: 1rem;
+`
+
+const StartButton = styled(PrimaryButton)`
+  width: 100%;
+  max-width: 20rem;
 `
 
 export default function Home() {
@@ -44,17 +35,14 @@ export default function Home() {
     <Background>
       <Container>
         <Hero>
-          <Hero1>
-            <Introduction>
-              <Text>
-                We are watching you
-              </Text>
-              <Link href="/neutron-boom" passHref>
-                <PrimaryButton as="a">Get started</PrimaryButton>
-              </Link>
-            </Introduction>
-            <HeroImage src="https://res.cloudinary.com/hexabisa/image/upload/v1647955832/react_sqm1rr.png" alt="" />
-          </Hero1>
+          <Introduction>
+            <Text>
+              Learn chemistry for free
+            </Text>
+            <Link href="/about" passHref>
+              <StartButton as="a">Get started</StartButton>
+            </Link>
+          </Introduction>
         </Hero>
       </Container>
     </Background>
