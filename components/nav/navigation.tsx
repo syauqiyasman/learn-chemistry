@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 import SrOnly from '@/components/ui/sr-only'
-import { LargeContainer } from '@/components/ui/container.styled'
+import { LargeContainer } from '@/components/ui/container'
 import SidebarMenu from './sidebar-menu'
 
 const NavigationBorder = styled.div`

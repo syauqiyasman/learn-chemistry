@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { LargeContainer } from '@/components/ui/container.styled'
+import { LargeContainer } from '@/components/ui/container'
 import SidebarMenu from './sidebar-menu'
 
 const Aside = styled.aside`
