@@ -5,10 +5,6 @@ const withMDX = require('@next/mdx')({
 
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    // Enables the styled-components SWC transform
-    styledComponents: true,
-  },
 }
 
 module.exports = withMDX({
